@@ -1,0 +1,140 @@
+page {
+    width: 100%;
+    view {
+        box-sizing: border-box;
+    }
+    .addressList {
+        width: 100%;
+        .addressItem {
+            display: flex;
+            flex-direction: column;
+            padding: 10rpx;
+            padding-bottom: 0;
+            height: 115rpx;
+            border-bottom: 1rpx solid rgb(240,240,240);
+            .top {
+                flex: 1;
+                display: flex;
+                padding-bottom: 10rpx;
+                .name {
+                    font-weight: 600;
+                    width: 140rpx;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .phone {
+                    font-weight: 600;
+                    padding-left: 10rpx;
+                    width: 200rpx;
+                }
+                .tag {
+                    padding-left: 30rpx;
+                    .active {
+                        font-size: 25rpx;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 70rpx;
+                        height: 38rpx;
+                        border: 1px solid rgb(238,238,238)
+                        ;
+                        border-radius: 30rpx; 
+                        color: white;
+                        background-color: rgb(103, 168, 236);
+                    }
+                }
+                .default {
+                    width: 80rpx;
+                    padding-left: 30rpx;
+                    .active {
+                        font-size: 25rpx;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 70rpx;
+                        height: 38rpx;
+                        border: 1px solid rgb(238,238,238)
+                        ;
+                        border-radius: 30rpx; 
+                        color: white;
+                        background-color: red;
+                    }
+                }
+            }
+            .bottom {
+                padding-bottom: 15rpx;
+                flex: 1;
+                display: flex;
+                font-size: 27rpx;
+                .address {
+                    width: 680rpx;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .edit {
+                    flex: 1;
+                    align-items: center;
+                    justify-content: right;
+                    i {
+                        font-size: 35rpx;
+                    }
+                }
+            }
+            .functionButton {
+                z-index: 5;
+                background-color: rgba(0, 0, 0, 0.3);
+                width: 100%;
+                height: 115rpx;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                font-size: 24rpx;
+                color: white;
+                .other {
+                    flex: 1;
+                    color: white;
+                }
+                .default {
+                    margin-top: 4rpx;
+                    height: 105rpx;
+                    width: 105rpx;
+                    background-color: rgb(252,202,0);
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .remove {
+                    margin-top: 4rpx;
+                    text-align: center;
+                    height: 105rpx;
+                    width: 105rpx;
+                    background-color: red;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .submit {
+        margin-top: 50rpx;
+        width: 100%;
+        font-size: 35rpx;
+        .btn {
+            background-color: red;
+            width: 36%;
+            margin-left: 32%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50rpx;
+            height: 70rpx;
+        }
+    }
+}

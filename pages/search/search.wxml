@@ -1,0 +1,20 @@
+<view class="container">
+    <view class="search">
+    <view class="inputBox">
+        <view class="inputView">
+            <input bindinput="bindinput" class="input" placeholder="请输入商品名字" />
+        </view>
+        <view class="icon" bindtap="showCamera">
+            <i class="iconfont icon-xiangji"></i>
+        </view>
+        </view>
+        <view class="searchButton" bindtap="search">
+            搜索
+        </view>
+    </view>
+</view>
+
+
+<view class="content">
+    <view class="item" wx:for="{{list}}" wx:key="index" bindtap="navigateTo" data-id="{{item.goods_id}}">{{item.goods_name}}</view>
+</view>

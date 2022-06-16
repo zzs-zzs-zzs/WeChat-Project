@@ -1,0 +1,139 @@
+<tabs class="tabs" bind:myEvent="handleEvent" titles="{{titles}}" currentIndex="{{currentIndex}}">
+    <view class="all" wx:if="{{showList[0]}}" slot="one">
+        <view wx:if="{{allList.length}}" class="listBox">
+            <view class="list"  wx:for="{{allList}}" wx:key="index">
+                <view class="list-item" wx:for="{{item}}" wx:for-item="itemChild" wx:for-index="indexChild" wx:key="indexChild" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                    <view class="img" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                        <image mode="widthFix" src="{{itemChild.goods_small_logo?itemChild.goods_small_logo:'http://image2.suning.cn/uimg/b2c/newcatentries/0070078057-000000000634917020_1_400x400.jpg'}}" alt="" data-index="{{indexChild}}" bindtap="navigateTo" data-id="{{itemChild.goods_id}}"></image>
+                    </view>
+                    <view class="msg" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                        <view bindtap="navigateTo" data-id="{{itemChild.goods_id}}" data-index="{{indexChild}}" class="title">{{itemChild.goods_name}}</view>
+                        <view bindtap="navigateTo" data-id="{{itemChild.goods_id}}" class="bottom">
+                            <view bindtap="navigateTo" data-id="{{itemChild.goods_id}}" data-index="{{indexChild}}" class="price">￥{{itemChild.goods_price}} X {{itemChild.num}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <view class="totalPrice"  data-index="{{index}}">
+                         ￥ {{item[0].totalPrice}}
+                    </view>
+                     <view wx:if="{{item[0].cancel}}" class="cancelIndent" style="margin-left:130rpx"  bindtap="goToHasCancel">已取消</view>
+                     <view wx:if="{{item[0].hasAccept === false}}" class="cancelIndent" style="margin-left:130rpx" bindtap="goToNotPay">未收货</view>
+                     <view  wx:if="{{item[0].hasAccept === true}}" class="cancelIndent" style="margin-left:130rpx"
+                     bindtap="goToHasPay">已完成</view>
+                    <view data-index="{{index}}" bindtap="payAgainFromAll"  class="goToPay" >再次购买</view>
+                </view>
+            </view>
+        </view>
+        <view wx:else class="icon">
+            <i class="iconfont icon-ku"></i>
+            <view class="text">您没有任何订单</view>
+        </view>
+    </view>
+    <view wx:if="{{showList[1]}}" slot="two" class="notPlay"> 
+        <view wx:if="{{notPayList.length}}" class="listBox">
+            <view class="list"  wx:for="{{notPayList}}" wx:key="index">
+                <view class="list-item" wx:for="{{item}}" wx:for-item="itemChild" wx:for-index="indexChild" wx:key="indexChild" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                    <view class="img" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                        <image mode="widthFix" src="{{itemChild.goods_small_logo?itemChild.goods_small_logo:'http://image2.suning.cn/uimg/b2c/newcatentries/0070078057-000000000634917020_1_400x400.jpg'}}" alt="" data-index="{{indexChild}}" bindtap="navigateTo" data-id="{{itemChild.goods_id}}"></image>
+                    </view>
+                    <view class="msg" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                        <view data-index="{{indexChild}}" class="title" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">{{itemChild.goods_name}}</view>
+                        <view class="bottom" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                            <view data-index="{{indexChild}}" class="price" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">￥{{itemChild.goods_price}} X {{itemChild.num}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <view class="totalPrice"  data-index="{{index}}">
+                         ￥ {{totalPrice[index]}}
+                    </view>
+                    <view data-index="{{index}}" bindtap="cancelIndent"  class="cancelIndent">取消订单</view>
+                    <view data-index="{{index}}" bindtap="goToPay"  class="goToPay">去支付</view>
+                </view>
+            </view>
+        </view>
+        <view wx:else class="icon">
+            <i class="iconfont icon-ku"></i>
+            <view class="text">您没有待付款订单</view>
+        </view>
+    </view>
+    <view class="notAccept" wx:if="{{showList[2]}}" slot="three">
+        <view wx:if="{{notAcceptList.length}}" class="listBox">
+            <view class="list"  wx:for="{{notAcceptList}}" wx:key="index">
+                <view class="list-item" wx:for="{{item}}" wx:for-item="itemChild" wx:for-index="indexChild" wx:key="indexChild" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                    <view class="img" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                        <image mode="widthFix" src="{{itemChild.goods_small_logo?itemChild.goods_small_logo:'http://image2.suning.cn/uimg/b2c/newcatentries/0070078057-000000000634917020_1_400x400.jpg'}}" alt="" data-index="{{indexChild}}" bindtap="navigateTo" data-id="{{itemChild.goods_id}}"></image>
+                    </view>
+                    <view class="msg" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                        <view data-index="{{indexChild}}" class="title" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">{{itemChild.goods_name}}</view>
+                        <view class="bottom" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                            <view data-index="{{indexChild}}" class="price" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">￥{{itemChild.goods_price}} X {{itemChild.num}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="bottom">
+                     <view class="totalPrice"  data-index="{{index}}">
+                         ￥ {{item[0].totalPrice}}
+                    </view>
+                    <view data-index="{{index}}" bindtap="hasAccept"  class="cancelIndent" style="margin-left:300rpx" bindtap="hasAccept">确认收货</view>
+                </view>
+            </view>
+        </view>
+        <view wx:else class="icon">
+            <i class="iconfont icon-ku"></i>
+            <view class="text">您没有待收货订单</view>
+        </view>
+    </view>
+    <view class="finshed" wx:if="{{showList[3]}}" slot="four">
+        <view wx:if="{{finshedList.length}}" class="listBox">
+            <view class="list"  wx:for="{{finshedList}}" wx:key="index">
+                <view class="list-item" wx:for="{{item}}" wx:for-item="itemChild" wx:for-index="indexChild" wx:key="indexChild" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                    <view class="img" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                        <image mode="widthFix" src="{{itemChild.goods_small_logo?itemChild.goods_small_logo:'http://image2.suning.cn/uimg/b2c/newcatentries/0070078057-000000000634917020_1_400x400.jpg'}}" alt="" data-index="{{indexChild}}" bindtap="navigateTo" data-id="{{itemChild.goods_id}}"></image>
+                    </view>
+                    <view class="msg" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                        <view data-index="{{indexChild}}" class="title" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">{{itemChild.goods_name}}</view>
+                        <view class="bottom" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                            <view data-index="{{indexChild}}" class="price" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">￥{{itemChild.goods_price}} X {{itemChild.num}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <view data-index="{{index}}" bindtap="payAgainFromFinshed"  class="goToPay" style="margin-left:500rpx">再次购买</view>
+                </view>
+            </view>
+        </view>
+        <view wx:else class="icon">
+            <i class="iconfont icon-ku"></i>
+            <view class="text">您没有已经完成的订单</view>
+        </view>
+    </view>
+    <view class="cancel" wx:if="{{showList[4]}}" slot="five">
+        <view wx:if="{{cancelList.length}}" class="listBox">
+            <view class="list"  wx:for="{{cancelList}}" wx:key="index">
+                <view class="list-item" wx:for="{{item}}" wx:for-item="itemChild" wx:for-index="indexChild" wx:key="indexChild" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                    <view class="img" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                        <image mode="widthFix" src="{{itemChild.goods_small_logo?itemChild.goods_small_logo:'http://image2.suning.cn/uimg/b2c/newcatentries/0070078057-000000000634917020_1_400x400.jpg'}}" alt="" data-index="{{indexChild}}" bindtap="navigateTo" data-id="{{itemChild.goods_id}}"></image>
+                    </view>
+                    <view class="msg" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                        <view data-index="{{indexChild}}" class="title" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">{{itemChild.goods_name}}</view>
+                        <view class="bottom" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">
+                            <view data-index="{{indexChild}}" class="price" bindtap="navigateTo" data-id="{{itemChild.goods_id}}">￥{{itemChild.goods_price}} X {{itemChild.num}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <view class="totalPrice"  data-index="{{index}}">
+                         ￥ {{item[0].totalPrice}}
+                    </view>
+                    <view data-index="{{index}}" bindtap="payAgainFromCancel"  class="goToPay" style="margin-left:300rpx">再次购买</view>
+                </view>
+            </view>
+        </view>
+        <view wx:else class="icon">
+            <i class="iconfont icon-ku"></i>
+            <view class="text">您没有取消得到订单</view>
+        </view>
+    </view>
+</tabs>

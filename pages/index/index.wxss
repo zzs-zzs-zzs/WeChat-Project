@@ -1,0 +1,57 @@
+view{
+  color: var(--themeCplor);
+}
+/* 轮播图 */
+swiper{
+  width:750rpx;
+  height:340rpx;
+}
+
+swiper image {
+  width:100%;
+}
+
+/* 四个分类导航 */
+.navigateBar{
+  width: 750rpx;
+  display: flex;
+}
+
+.navigateBar-item{
+  flex: 1;
+  padding: 15px;
+}
+
+.navigateBar-item image {
+  width: 100%;
+  height: 140rpx;
+}
+
+/* 时尚女装 */
+.ClothesTitle image{
+  width: 100%;
+  height: 50rpx;
+}
+
+.Clothes {
+  display: flex;
+  width: 100%;
+}
+
+.Clothes-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.Clothes-item image{
+  height: 200rpx;
+  width: 100%; 
+}
+
+.Clothes-item:first-child image{
+  height: 400rpx;
+  width: 100%;
+}

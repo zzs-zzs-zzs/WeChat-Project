@@ -1,0 +1,15 @@
+.container {
+  height: 60rpx;
+  padding: 10rpx;
+  font-size: 30rpx;
+  background-color: var(--themeColor);
+}
+.container navigator {
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8rpx;
+  height: 100%;
+  text-align: center;
+}

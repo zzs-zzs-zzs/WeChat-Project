@@ -1,0 +1,40 @@
+<tabs bind:myEvent="handleEvent" titles="{{titles}}">
+    <view wx:if="{{show}}" slot="one" class="one">
+        <!-- 问题类型 -->
+        <view class="problemList">
+            <view class="advice" bindtap="handleFunctionBtn">功能建议</view>
+            <view class="buyProblem" bindtap="handleFunctionBtn">购买遇到问题</view>
+            <view class="performanceProblem" bindtap="handleFunctionBtn">性能问题</view>
+            <view class="other" bindtap="handleFunctionBtn">其他</view>
+        </view>
+        <!-- 输入框 -->
+        <view class="inputBox">
+            <textarea bindinput="bindinput" maxlength="150" class="input" placeholder="请描述一下您的问题" />
+            <view class="num">{{textLength}}/150</view>
+        </view>
+        
+        <!-- 图片 -->
+        <view class="imgList">
+            <view class="img" wx:for="{{imgList}}" wx:key="index">
+                <image bindtap="handleClick" data-index="{{index}}" src="{{item}}" alt="" />
+                <view class="close">
+                    <i data-index="{{index}}" bindtap="closeImage" class="iconfont icon-icon--shanchu"></i>
+                </view>
+            </view>
+            <view class="addBtn" bindtap="cameraList">
+                <i class="iconfont icon-tianjia"></i>
+            </view>
+        </view>
+        <view class="submit" bindtap="submit">
+            <view class="btn" bindtap="submit">提交</view >
+        </view>
+    </view>
+    <view wx:else slot="two" >
+        商品上架投诉
+    </view>
+</tabs>
+
+
+
+
+

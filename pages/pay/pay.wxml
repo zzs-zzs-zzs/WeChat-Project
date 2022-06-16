@@ -1,0 +1,81 @@
+<view class="addressContainer">
+    <view bindtap="navigateToAddress" wx:if="{{show === false}}" class="address">
+        添加收货地址
+    </view>
+    <view bindtap="navigateToAddress"  wx:if="{{show}}" class="addressText">
+        <view class="text">
+            <view class="top">
+                <view wx:if="{{adderssText.default}}" class="{{adderssText.default?'active':''}}">{{adderssText.default?"默认":""}}</view>
+                <view class="{{adderssText.tag?'tagActive':''}}">{{adderssText.tag}}</view>
+                <view class="addressText">
+                {{adderssText.province}} {{adderssText.city}} {{adderssText.detailedAddress}}
+                </view>
+            </view>
+            <view class="textBottom">
+                {{adderssText.name}} {{adderssText.phone}}
+            </view>
+        </view>
+        <view class="icon">
+            <i class="iconfont icon-jiantou"></i>
+        </view>
+    </view>
+</view>
+<view class="content">
+    <view class="list-item" wx:for="{{list}}" wx:key="index">
+        <view class="rightContent" >
+            <!-- 缩略图 -->
+            <view class="img">
+                <image mode="widthFix" src="{{item.goods_small_logo}}" alt="" data-index="{{index}}" />
+            </view>
+            <view class="rightMsg">
+                <view class="topMsg">
+                    {{item.goods_name}}
+                </view>
+                <view class="bottomList">
+                    <view class="price">￥{{item.goods_price}}</view>
+                    <view class="num">
+                        X {{item.num}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+<view class="goods_msg">
+    <view class="weight">
+        <view class="left">商品重量</view>
+        <view class="right">{{weight}}</view>
+    </view>
+    <view class="freight">
+        <view class="left">运费</view>
+        <view class="right">{{freight}}</view>
+    </view>
+    <view class="invoice">
+        <view class="left">发票</view>
+        <view class="right">无</view>
+    </view>
+    <view class="payWay">
+        <view class="left">支付方式</view>
+        <view class="right">微信支付</view>
+    </view>
+</view>
+
+
+<!-- 底部导航 -->
+<view class="bottom">
+    <view class="chooseAll">
+       <view></view>
+    </view>
+    <view class="totalPrice">
+        <view class="topMsg">
+            总计:￥{{totalPrice}}
+        </view>
+        <view class="bottomMsg">
+            包含运费
+        </view>
+    </view>
+    <view class="pay" bindtap="pay">支 付({{totalNum}})</view>
+</view>
+

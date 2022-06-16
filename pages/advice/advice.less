@@ -1,0 +1,124 @@
+page {
+    background-color: rgb(238,238,238);
+    width: 100%;
+    font-size: 30rpx;
+    .one {
+        .problemList {
+            margin-top: 40rpx;
+            width: 94%;
+            height: 70rpx;
+            flex: 1;
+            display: flex;
+            view {
+                margin-left: 20rpx;
+                padding: 10rpx;
+                background-color: white;
+                border-radius: 10rpx;
+            }
+            .advice {
+                flex: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .buyProblem {
+                flex: 3;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .performanceProblem {
+                flex: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .other {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .inputBox {
+            width: 100%;
+            position: relative;
+            .input {
+                box-sizing: border-box;
+                background-color: white;
+                width: 94%;
+                margin-left: 3%;
+                margin-top: 40rpx;
+                height: 290rpx;
+                border-radius: 10rpx;
+                padding: 10rpx;
+            }
+            .num {
+                position: absolute;
+                bottom: 0;
+                right: 30rpx;
+                color: gray;
+            }
+        }
+        .imgList {
+            background-color: white;
+            width: 94%;
+            margin-left: 3%;
+            display: flex;
+            margin-top: 40rpx;
+            flex-wrap: wrap;
+            border-radius: 15rpx;
+           
+            .img {
+                flex: 1;
+                min-width: 235rpx;
+                max-width: 235rpx;
+                height: 235rpx; 
+                position: relative;
+                box-sizing: border-box;
+                padding: 15rpx;
+                image {
+                    height: 100%;
+                    width: 100%;
+                }
+                .close {
+                    i {
+                        font-size: 50rpx;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        color: red;
+                    }
+                }
+            }
+            .addBtn {
+                flex: 1;
+                max-width: 235rpx;
+                min-width: 235rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                i {
+                    font-size: 150rpx;
+                }
+            }
+        }
+        .submit {
+            margin-top: 40rpx;
+            width: 100%;
+            font-size: 35rpx;
+            .btn {
+                background-color: red;
+                width: 50%;
+                margin-left: 25%;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50rpx;
+                height: 80rpx;
+            }
+        }
+    }
+    
+}

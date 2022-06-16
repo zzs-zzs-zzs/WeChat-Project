@@ -1,0 +1,20 @@
+<view class="tabs">
+    <view class="tabs-title">
+        <view class="title-item {{index===currentIndex?'active':''}}" 
+        wx:for="{{titles}}" 
+        wx:key="index" 
+        data-index="{{index}}" 
+        data-currentIndex="{{currentIndex}}"
+        bindtap="toFather">
+            {{item}}
+        </view>
+    </view>
+    
+    <view class="tabs-content">
+        <slot name="one"></slot>
+        <slot name="two"></slot>
+        <slot name="three"></slot>
+        <slot name="four"></slot>
+        <slot name="five"></slot>
+    </view>
+</view>

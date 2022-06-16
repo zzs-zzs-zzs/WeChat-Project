@@ -1,0 +1,64 @@
+page {
+  width: 100%;
+  height: 100%;
+}
+page .camera {
+  width: 100%;
+  height: 100%;
+}
+page .camera camera {
+  width: 100%;
+  height: 100%;
+}
+page .camera image {
+  width: 100%;
+  height: 100%;
+}
+page .camera .bottom {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  width: 100%;
+  height: 155rpx;
+  position: absolute;
+  bottom: 0;
+}
+page .camera .bottom .changeCamera {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+page .camera .bottom .changeCamera i {
+  color: black;
+  font-size: 65rpx;
+}
+page .camera .bottom .takePhoto {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+page .camera .bottom .takePhoto .taken {
+  height: 90rpx;
+  width: 90rpx;
+  border: 8rpx solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+page .camera .bottom .takePhoto .taken .inline-taken {
+  height: 80rpx;
+  width: 80rpx;
+  background-color: white;
+  border-radius: 50%;
+}
+page .camera .bottom .imgList {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+page .camera .bottom .imgList i {
+  font-size: 65rpx;
+}

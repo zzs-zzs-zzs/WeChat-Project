@@ -1,0 +1,216 @@
+page {
+  background-color: #eeeeee;
+  width: 100%;
+}
+page .addressContainer {
+  background-color: white;
+  width: 100%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+page .addressContainer .address {
+  width: 280rpx;
+  height: 90rpx;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 10rpx;
+  padding-top: 20rpx ;
+  padding-left: 40rpx;
+  font-size: 35rpx;
+  background-color: #f8f8f8;
+  border: 1px solid #f0f0f0;
+  border-radius: 5%;
+}
+page .addressContainer .addressText {
+  padding-left: 10rpx;
+  height: 100rpx;
+  display: flex;
+}
+page .addressContainer .addressText .text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+page .addressContainer .addressText .text .top {
+  height: 50rpx;
+  padding-bottom: 10rpx;
+  display: flex;
+}
+page .addressContainer .addressText .text .top .active {
+  width: 60rpx;
+  font-size: 25rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70rpx;
+  height: 38rpx;
+  border: 1px solid #eeeeee;
+  border-radius: 30rpx;
+  color: white;
+  background-color: red;
+}
+page .addressContainer .addressText .text .top .tagActive {
+  width: 60rpx;
+  font-size: 25rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70rpx;
+  height: 38rpx;
+  border: 1px solid #eeeeee;
+  border-radius: 30rpx;
+  color: white;
+  background-color: #67a8ec;
+}
+page .addressContainer .addressText .text .top .addressText {
+  flex: 1;
+}
+page .addressContainer .addressText .text .textBottom {
+  flex: 1;
+  padding-left: 10rpx;
+}
+page .addressContainer .addressText .icon {
+  width: 50rpx;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+page .addressContainer .addressText .icon i {
+  font-size: 30rpx;
+}
+page .content {
+  margin-top: 25rpx;
+}
+page .content .list-item {
+  background-color: white;
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+}
+page .content .list-item .radio {
+  flex: 1;
+  height: 40rpx;
+  margin-top: 100rpx;
+  margin-left: 20rpx;
+}
+page .content .list-item .radio i {
+  font-size: 40rpx;
+}
+page .content .list-item .radio .icon-danxuankuang-copy {
+  color: red;
+}
+page .content .list-item .rightContent {
+  display: flex;
+  flex: 13;
+  height: 100%;
+  border-bottom: 1px solid #eeeeee;
+}
+page .content .list-item .rightContent .img {
+  flex: 3;
+  box-sizing: border-box;
+  padding: 20rpx;
+  height: 100%;
+  overflow: hidden;
+}
+page .content .list-item .rightContent .img image {
+  width: 100%;
+}
+page .content .list-item .rightContent .rightMsg {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+}
+page .content .list-item .rightContent .rightMsg .topMsg {
+  width: 100%;
+  height: 130rpx;
+  overflow: hidden;
+  margin-top: 55rpx;
+  font-size: 35rpx;
+}
+page .content .list-item .rightContent .rightMsg .bottomList {
+  width: 100%;
+  height: 130rpx;
+  display: flex;
+}
+page .content .list-item .rightContent .rightMsg .bottomList .price {
+  flex: 5;
+  background-color: #fff;
+  text-align: left;
+  color: red;
+  margin-top: 20rpx;
+  font-size: 35rpx;
+}
+page .content .list-item .rightContent .rightMsg .bottomList .num {
+  flex: 1;
+  display: flex;
+  margin-top: 25rpx;
+  color: gray;
+  font-size: 35rpx;
+}
+page .goods_msg {
+  background-color: white;
+  margin-top: 20rpx;
+  margin-bottom: 95rpx;
+  height: 270rpx;
+  width: 100%;
+  padding-top: 30rpx;
+}
+page .goods_msg view {
+  display: flex;
+  font-size: 35rpx;
+  padding: 5rpx;
+}
+page .goods_msg view .left {
+  flex: 1;
+  padding-left: 20rpx;
+}
+page .goods_msg view .right {
+  flex: 1;
+  justify-content: flex-end;
+  padding-right: 30rpx;
+}
+page .bottom {
+  background-color: white;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 110rpx;
+  font-size: 35rpx;
+}
+page .bottom .chooseAll {
+  flex: 1;
+}
+page .bottom .chooseAll view {
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+}
+page .bottom .chooseAll view i {
+  font-size: 40rpx;
+}
+page .bottom .chooseAll view .icon-danxuankuang-copy {
+  color: red;
+}
+page .bottom .totalPrice {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+page .bottom .totalPrice .topMsg {
+  flex: 1;
+  color: red;
+  font-weight: 400;
+}
+page .bottom .totalPrice .bottomMsg {
+  flex: 1;
+  color: gray;
+}
+page .bottom .pay {
+  flex: 1;
+  background-color: red;
+  color: white;
+  font-size: 40rpx;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 25rpx;
+}

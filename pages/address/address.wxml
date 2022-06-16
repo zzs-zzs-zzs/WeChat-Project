@@ -1,0 +1,38 @@
+<view class="addressList">
+    <view class="addressItem" wx:for="{{addressList}}" wx:key="index" >
+        <view class="top" bindtap="hideMask"  data-index="{{index}}" bindlongpress="shouFunctionList">
+            <view class="name"bindtap="hideMask"  data-index="{{index}}" bindlongpress="shouFunctionList">
+                {{item.name}}
+            </view>
+            <view class="phone"bindtap="hideMask"  data-index="{{index}}" bindlongpress="shouFunctionList">
+                {{item.phone}}
+            </view>
+            <view class="tag"bindtap="hideMask"  data-index="{{index}}" bindlongpress="shouFunctionList">
+                <view class="{{item.tag?'active':''}}" bindtap="hideMask" data-index="{{index}}" bindlongpress="shouFunctionList">{{item.tag}}</view>
+            </view>
+            <view class="default" data-index="{{index}}" bindtap="hideMask" bindlongpress="shouFunctionList">
+                <view class="{{item.default?'active':''}}" bindtap="hideMask" data-index="{{index}}" bindlongpress="shouFunctionList">{{item.default?'默认':''}}</view>
+            </view>
+        </view>
+        <view class="bottom">
+            <view class="address"  data-index="{{index}}" bindtap="hideMask" bindlongpress="shouFunctionList">
+                {{item.province}}{{item.city}} {{item.detailedAddress}}
+            </view>
+            <view class="edit">
+                <i data-index="{{index}}" bindtap="navigateToEditAddress" class="iconfont icon-bianji"></i>
+            </view>
+        </view>
+         <!-- 功能按键 -->
+        <view wx:if="{{addressFunctionList[index]}}" class="functionButton" style="top:{{index * 115}}rpx">
+            <view class="other" data-index="{{index}}" bindtap="hideMask" data-checked="checked"></view>
+            <view class="default" data-index="{{index}}" data-default="{{item.default}}" bindtap="changeDefault">{{item.default?'取消默认':'设置默认'}}</view>
+            <view class="other" data-index="{{index}}" bindtap="hideMask" data-checked="checked"></view>
+            <view class="remove" data-index="{{index}}" bindtap="removeAddress">删除地址</view>
+            <view class="other" data-index="{{index}}" bindtap="hideMask" data-checked="checked"></view>
+        </view>
+    </view>
+</view>
+<!-- 提交 -->
+<view class="submit">
+    <view class="btn" bindtap="add">添加</view>
+</view>

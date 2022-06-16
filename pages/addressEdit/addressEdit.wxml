@@ -1,0 +1,67 @@
+<view class="addressBox">
+    <!-- 收货人 -->
+    <view class="nameBox">
+        <view class="text">收货人</view>
+        <view class="name">
+            <input maxlength="10" bindinput="nameInput" value="{{name}}" type="text" />
+        </view>
+    </view>
+    <!-- 联系电话 -->
+    <view class="phoneBox">
+        <view class="text">手机号码</view>
+        <view class="number">
+            <input type="number" maxlength="11" bindinput="phoneInput" value="{{phone}}"/>
+        </view>
+    </view>
+    <!-- 所在地区 -->
+    <view class="area">
+        <view class="text">所在地区</view>
+        <view class="addressText">
+            {{address.province}}{{address.city}}
+        </view>
+        <view class="map" bindtap="getAddress">
+            <i class="iconfont icon-dingwei"></i>
+        </view>
+    </view>
+    <!-- 详细地址 -->
+    <view class="detailedAddress">
+        <view class="text">详细地址</view>
+        <view class="detailedAddressText">
+            <textarea bindinput="detailedAddressinput" placeholder="详细地址" maxlength="20" value="{{detailedAddress}}"></textarea>
+        </view>
+    </view>
+    <!-- 标签 -->
+    <view class="tag">
+        <view class="text">标签</view>
+        <view class="tagList">
+            <view class="home">
+                <view class="{{chooseHome?'active':''}}" bindtap="chooseHome">家</view>
+            </view>
+            <view class="conpany">
+                <view class="{{chooseConpany?'active':''}}" bindtap="chooseConpany">公司</view>
+            </view>
+            <view class="scholl">
+                <view class="{{chooseScholl?'active':''}}" bindtap="chooseScholl">学校</view>
+            </view>
+            <view class="other">
+                <view class="{{chooseOther?'active':''}}" bindtap="chooseOther">其他</view>
+            </view>
+            
+        </view>
+        
+    </view>
+    <!-- 设置为默认地址 -->
+    <view class="defaultAddress">
+        <view class="text">
+            <view class="top">设置默认地址</view>
+            <view class="bottom">提醒,每次下单会推荐使用默认地址</view>
+        </view>
+        <view class="choose">
+            <switch bindchange="bindchange" color="red" checked="{{default}}" />
+        </view>
+    </view>
+    <!-- 提交 -->
+    <view class="submit">
+        <view class="btn" bindtap="save">提交</view>
+    </view>
+</view>

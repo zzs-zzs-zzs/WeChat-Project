@@ -1,0 +1,104 @@
+
+<!-- 登陆界面需要先点击登录才能看到信息 -->
+
+<view class="headPortrait">
+    <view wx:if="{{showHeadPortrait}}" class="smallHeadPortrait">
+        <image class="bgImg" src="{{url}}" alt=""></image>
+        <image class="smImg" src="{{url}}" alt=""></image>
+        <view class="nickName">{{userInfo.nickName}}</view>
+    </view>
+    <button wx:if="{{!showHeadPortrait}}" type="primary" plain="{{true}}" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">登录</button>
+</view>
+
+<view class="menuList">
+    <view class="collectShop" bindtap="showTip">
+        <view class="number">{{menuList.collectShop}}</view>
+        <view class="name">收藏的店铺</view>
+    </view>
+    <view class="collectShoper" bindtap="navigateToCollect">
+        <view class="number">{{menuList.collectShoper}}</view>
+        <view class="name">收藏的商品</view>
+    </view>
+    <view class="attention" bindtap="showTip">
+        <view class="number">{{menuList.attention}}</view>
+        <view class="name">关注的商品</view>
+    </view>
+    <view class="history" bindtap="navagateToHistory">
+        <view class="number">{{menuList.history}}</view>
+        <view class="name">我的足迹</view>
+    </view>
+</view>
+
+<view class="indent">
+    <view class="businessList">
+        <view class="notPay" bindtap="navigateToNotPay">
+            <view class="icon">
+                <i class="iconfont icon-daifukuan"></i>
+                 <text wx:if="{{showNotPayBadge}}" class="weui-badge">{{notPayCount}}</text>
+            </view>
+            <view class="text">待付款</view>
+        </view>
+        <view class="notAccept" bindtap="navigateToNotAccept">
+            <view class="icon">
+                <i class="iconfont icon-daishouhuo"></i>
+                <text wx:if="{{showNotAcceptBadge}}" class="weui-badge">{{notAccepCount}}</text>
+            </view>
+            <view class="text">待收货</view>
+        </view>
+        <view class="noteValuate" bindtap="showTip">
+            <view class="icon">
+                <i class="iconfont icon-31daipingjia"></i>
+            </view>
+            <view class="text">待评价</view>
+        </view>
+        <view class="backMoney" bindtap="showTip">
+             <view class="icon">
+                 <i class="iconfont icon-icon_tuikuanshouhou2x"></i>
+             </view>
+            <view class="text">退款/售后</view>
+        </view>
+        <view class="allIndent" bindtap="navigateToAll">
+            <view class="icon">
+                <i class="iconfont icon-quanbudingdan"></i>
+            </view>
+            <view class="text">全部订单</view>
+        </view>
+    </view>
+</view>
+
+<!-- 管理地址 -->
+<view class="address" bindtap="nanigateToAddtress">
+    <view class="text">收货地址管理</view>
+    <view class="icon">
+        <i class="iconfont icon-jiantou"></i>
+    </view>
+</view>
+
+<view class="functionList">
+    <view class="contact borderBottom">
+        <view class="text">联系客服</view>
+        <view class="number">
+            400-18-40000
+        </view>
+    </view>
+    <view bindtap="navigateToAdvice" class="advice borderBottom">
+        <view class="text">意见反馈</view>
+        <view class="icon">
+            <i class="iconfont icon-jiantou"></i>
+        </view>
+    </view>
+    <view class="about borderBottom" bindtap="aboutUS">
+        <view class="text">关于我们</view>
+        <view class="icon">
+            <i class="iconfont icon-jiantou"></i>
+        </view>
+    </view>
+</view>
+
+<!-- 把应用推荐给别人 -->
+<view class="pushBox" bindtap="logOut">
+        <button class="push"> 退出登录</button>
+        <view class="icon">
+            <i class="iconfont icon-jiantou"></i>
+        </view>
+</view>

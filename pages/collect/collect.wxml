@@ -1,0 +1,30 @@
+
+<tabs bind:myEvent="showIndex" titles="{{title}}" class="tabs">
+    <view class="goods" slot="one" wx:if="{{currentIndex===0}}">
+        <view class="classify">
+            <view class="all {{showList[0]?'active':''}}" bindtap="showAll">全部</view>
+            <view class="{{showList[1]?'active':''}}" bindtap="showHot">正在热卖</view>
+            <view class="{{showList[2]?'active':''}}" bindtap="showFeature">即将上线</view>
+            <view class="other"></view>
+        </view>
+        <view class="content">
+            <view wx:if="{{showList[0]}}">
+                <view class="list">
+                    <view class="list-item" wx:for="{{list}}" wx:key="index">
+                        <view class="img">
+                            <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'http://image2.suning.cn/uimg/b2c/newcatentries/0070078057-000000000634917020_1_400x400.jpg'}}" alt="" data-index="{{index}}" bindtap="navigateTo"></image>
+                        </view>
+                        <view class="msg">
+                            <view data-index="{{index}}" bindtap="navigateTo"  class="title">{{item.goods_name}}</view>
+                            <view data-index="{{index}}" bindtap="navigateTo"  class="price">￥{{item.goods_price}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view wx:if="{{showList[1]}}">正在热卖</view>
+            <view wx:if="{{showList[2]}}">即将上线</view>
+        </view>
+    </view>
+    <view class="brand" slot="two" wx:elif="{{currentIndex===1}}">品牌收藏</view>
+    <view class="shop" slot="three" wx:elif="{{currentIndex===2}}">店铺收藏</view>
+</tabs>

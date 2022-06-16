@@ -1,0 +1,149 @@
+page {
+  width: 100%;
+  background-color: #eeeeee;
+}
+page .tabs .all .icon {
+  width: 100%;
+  margin-top: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+page .tabs .all .icon i {
+  font-size: 150rpx;
+}
+page .tabs .all .icon .text {
+  font-size: 40rpx;
+}
+page .tabs view .icon {
+  width: 100%;
+  margin-top: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+page .tabs view .icon i {
+  font-size: 150rpx;
+}
+page .tabs view .icon .text {
+  font-size: 40rpx;
+}
+page .tabs view .listBox .list {
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  background-color: white;
+  padding-bottom: 20rpx;
+}
+page .tabs view .listBox .list .list-item {
+  display: flex;
+  padding: 10px;
+  height: 185rpx;
+  padding-bottom: 50rpx;
+}
+page .tabs view .listBox .list .list-item .img {
+  box-sizing: border-box;
+  margin-right: 30rpx;
+  flex: 2;
+}
+page .tabs view .listBox .list .list-item .img image {
+  width: 100%;
+}
+page .tabs view .listBox .list .list-item .msg {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50rpx;
+  font-size: 35rpx;
+  height: 100%;
+}
+page .tabs view .listBox .list .list-item .title {
+  height: 90rpx;
+  overflow: hidden;
+}
+page .tabs view .listBox .list .list-item .bottom {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+page .tabs view .listBox .list .list-item .bottom .price {
+  flex: 2;
+  color: red;
+  margin-top: 15rpx;
+}
+page .tabs view .listBox .list .bottom {
+  display: flex;
+  margin-top: 20rpx;
+}
+page .tabs view .listBox .list .bottom .totalPrice {
+  padding-left: 10rpx;
+  width: 180rpx;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  color: red;
+  font-size: 35rpx;
+}
+page .tabs view .listBox .list .bottom .cancelIndent {
+  display: inline-block;
+  margin-left: 130rpx;
+  width: 160rpx;
+  height: 35rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rpx;
+  border: 1px solid black;
+  border-radius: 40rpx;
+}
+page .tabs view .listBox .list .bottom .goToPay {
+  margin-left: 50rpx;
+  width: 160rpx;
+  height: 35rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rpx;
+  border: 1px solid red;
+  color: red;
+  border-radius: 40rpx;
+}
+page .tabs .notAccept .icon {
+  width: 100%;
+  margin-top: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+page .tabs .notAccept .icon i {
+  font-size: 150rpx;
+}
+page .tabs .notAccept .icon .text {
+  font-size: 40rpx;
+}
+page .tabs .finshed .icon {
+  width: 100%;
+  margin-top: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+page .tabs .finshed .icon i {
+  font-size: 150rpx;
+}
+page .tabs .finshed .icon .text {
+  font-size: 40rpx;
+}
+page .tabs .cancel .icon {
+  width: 100%;
+  margin-top: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+page .tabs .cancel .icon i {
+  font-size: 150rpx;
+}
+page .tabs .cancel .icon .text {
+  font-size: 40rpx;
+}

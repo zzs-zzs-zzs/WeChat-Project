@@ -1,0 +1,118 @@
+page {
+  background-color: #eeeeee;
+  width: 100%;
+  font-size: 30rpx;
+}
+page .one .problemList {
+  margin-top: 40rpx;
+  width: 94%;
+  height: 70rpx;
+  flex: 1;
+  display: flex;
+}
+page .one .problemList view {
+  margin-left: 20rpx;
+  padding: 10rpx;
+  background-color: white;
+  border-radius: 10rpx;
+}
+page .one .problemList .advice {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+page .one .problemList .buyProblem {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+page .one .problemList .performanceProblem {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+page .one .problemList .other {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+page .one .inputBox {
+  width: 100%;
+  position: relative;
+}
+page .one .inputBox .input {
+  box-sizing: border-box;
+  background-color: white;
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 40rpx;
+  height: 290rpx;
+  border-radius: 10rpx;
+  padding: 10rpx;
+}
+page .one .inputBox .num {
+  position: absolute;
+  bottom: 0;
+  right: 30rpx;
+  color: gray;
+}
+page .one .imgList {
+  background-color: white;
+  width: 94%;
+  margin-left: 3%;
+  display: flex;
+  margin-top: 40rpx;
+  flex-wrap: wrap;
+  border-radius: 15rpx;
+}
+page .one .imgList .img {
+  flex: 1;
+  min-width: 235rpx;
+  max-width: 235rpx;
+  height: 235rpx;
+  position: relative;
+  box-sizing: border-box;
+  padding: 15rpx;
+}
+page .one .imgList .img image {
+  height: 100%;
+  width: 100%;
+}
+page .one .imgList .img .close i {
+  font-size: 50rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+}
+page .one .imgList .addBtn {
+  flex: 1;
+  max-width: 235rpx;
+  min-width: 235rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+page .one .imgList .addBtn i {
+  font-size: 150rpx;
+}
+page .one .submit {
+  margin-top: 40rpx;
+  width: 100%;
+  font-size: 35rpx;
+}
+page .one .submit .btn {
+  background-color: red;
+  width: 50%;
+  margin-left: 25%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+  height: 80rpx;
+}

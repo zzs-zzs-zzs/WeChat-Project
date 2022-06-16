@@ -1,0 +1,22 @@
+<view class="camera">
+    <!-- 相机 -->
+    <camera wx:if="{{showCamera}}" device-position="{{devicePosition}}" flash="off" binderror="error"  mode="normal"></camera>
+    <!-- 照片 -->
+    <image mode="widthFix" wx:if="{{showImg}}" src="{{src}}" alt="" />
+    <!-- 底部选项 -->
+    <view  wx:if="{{showCamera}}" class="bottom">
+        <!-- 转换摄像头 -->
+        <view class="changeCamera">
+            <i class="iconfont icon-zhuanhuan" bindtap="changeCamera"></i>
+        </view>
+        <view class="takePhoto">
+            <view class="taken">
+                <view class="inline-taken" bindtap="takePhoto"></view>
+            </view> 
+        </view>
+        <view class="imgList">
+            <i class="iconfont icon-xiangce" bindtap="imgList"></i>
+        </view>
+    </view>
+    
+</view>

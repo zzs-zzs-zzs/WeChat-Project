@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view class="container">
+    <searchInput></searchInput>
+</view>
+<!-- 轮播图部分 -->
+
+<view class="swiper">
+  <swiper autoplay indicator-dots circular>
+    <swiper-item wx:for="{{imgList}}" wx:key="goods_id">
+      <navigator url="{{item.navigator_url}}">
+        <image mode="widthFix" src="{{item.image_src}}" alt=""></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 四个分类导航 -->
+<view class="navigateBar">
+  <view class="navigateBar-item" wx:for="{{navigaterBar}}" wx:key="index">
+    <navigator url="/pages/category/category"
+    open-type="switchTab">
+      <image src="{{item.image_src}}" />
+    </navigator>
+    
+  </view>
+</view>
+
+
+<!-- 时尚女装 -->
+
+<view>
+  <view wx:for="{{Clothes}}" wx:key="index">
+    <view class="ClothesTitle">
+      <image src="{{Clothes[index].floor_title.image_src}}" alt="" />
+    </view>
+    <view class="Clothes">
+      <view class="Clothes-item">
+        <navigator url="{{Clothes[index].product_list[0].navigator_url}}">
+          <image src="{{Clothes[index].product_list[0].image_src}}" alt="" />
+        </navigator>
+      
+    </view>
+    <view class="Clothes-item">
+      <view>
+        <navigator url="{{Clothes[index].product_list[1].navigator_url}}">
+          <image src="{{Clothes[index].product_list[1].image_src}}" alt="" />
+        </navigator>
+        <navigator url="{{Clothes[index].product_list[2].navigator_url}}">
+          <image src="{{Clothes[index].product_list[2].image_src}}" alt="" />
+        </navigator>
+      </view>
+    </view>
+    <view class="Clothes-item">
+      <view>
+        <navigator url="{{Clothes[index].product_list[3].navigator_url}}">
+          <image src="{{Clothes[index].product_list[3].image_src}}" alt="" />
+        </navigator>
+        <navigator url="{{Clothes[index].product_list[4].navigator_url}}">
+          <image src="{{Clothes[index].product_list[4].image_src}}" alt="" />
+        </navigator>
+      </view>
+    </view>
+    </view>
+  </view>
+</view>

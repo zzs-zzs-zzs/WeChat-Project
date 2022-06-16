@@ -1,0 +1,6 @@
+<view class="container">
+    <navigator url="../../pages/search/search">
+        <text>搜索</text>
+    </navigator>
+</view>
+  

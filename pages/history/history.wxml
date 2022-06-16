@@ -1,0 +1,11 @@
+<view class="list">
+    <view class="list-item" wx:for="{{list}}" wx:key="index">
+        <view class="img">
+            <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'http://image2.suning.cn/uimg/b2c/newcatentries/0070078057-000000000634917020_1_400x400.jpg'}}" alt="" data-index="{{index}}" bindtap="navigateTo"></image>
+        </view>
+        <view class="msg">
+            <view data-index="{{index}}" bindtap="navigateTo"  class="title">{{item.goods_name}}</view>
+            <view data-index="{{index}}" bindtap="navigateTo"  class="price">￥{{item.goods_price}}</view>
+        </view>
+    </view>
+</view>

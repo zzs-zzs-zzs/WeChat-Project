@@ -1,0 +1,215 @@
+page {
+    background-color: rgb(238,238,238);
+    .headPortrait {
+        width: 100%;
+        height: 350rpx;
+        background-color: rgb(225,68,78);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35rpx;
+        position: relative;
+        .smallHeadPortrait {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .bgImg {
+                position: absolute;
+                width: 100%;
+                height: 350rpx;
+                filter: blur(3px);
+            }
+            .smImg {
+                position: absolute;
+                width: 120rpx;
+                height: 120rpx;
+                border-radius: 50%;
+                top: 100rpx;
+            }
+            .nickName {
+                position: absolute;
+                top: 250rpx;
+                color: white;
+            }
+        }
+    }
+
+
+    .menuList {
+        width: 94%;
+        background-color: white;
+        height: 100rpx;
+        display: flex;
+        z-index: 100;
+        margin-left: 3%;
+        font-size: 30rpx;
+        position: absolute;
+        top: 320rpx;
+        border-radius: 15rpx;
+        view {
+            flex: 1;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .number {
+                color: red;
+            }
+        }
+    }
+
+    .indent {
+        width: 94%;
+        height: 140rpx;
+        flex-direction: column;
+        background-color: white;
+        margin-left: 3%;
+        font-size: 30rpx;
+        margin-top: 100rpx;
+        border-radius: 15rpx;
+        font-size: 30rpx;
+        .businessList {
+            display: flex;
+            height: 100%;
+            view {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .icon {
+                    flex: 2;
+                    position: relative;
+                    i {
+                        font-size: 60rpx;
+                    }
+                    .icon-quanbudingdan {
+                        color: red;
+                    }
+                    .weui-badge {
+                        position: absolute;
+                        display: inline-block;
+                        padding: 2rpx 18rpx 2rpx 18rpx;
+                        background-color: red;
+                        color: white;
+                        top: 0;
+                        right: -10rpx;
+                        width: 18rpx;
+                        height: 35rpx;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .allIndent {
+                color: red;
+            }
+        }
+    }
+
+    .address {
+        height: 90rpx;
+        width: 94%;
+        margin-left: 3%;
+        background-color: white;
+        display: flex;
+        margin-top: 20rpx;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15rpx;
+        font-size: 30rpx;
+        .text {
+            flex: 10;
+            padding-left: 10rpx;
+        }
+        .icon {
+            flex: 1;
+            justify-content: right;
+            i {
+                font-size: 30rpx;
+            }
+        }
+    }
+
+    .functionList {
+        height: 250rpx;
+        width: 94%;
+        margin-left: 3%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20rpx;
+        border-radius: 15rpx;
+        font-size: 30rpx;
+        .borderBottom {
+            border-bottom: 1rpx solid rgb(238,238,238);
+        }
+        view {
+            display: flex;
+            flex: 1;
+            padding-left: 10rpx;
+            align-items: center;
+            .text {
+                flex: 10;
+            }
+            .icon {
+                flex: 1;
+                display: flex;
+                justify-content: right;
+                i {
+                    font-size: 30rpx;
+                }
+            }
+            .number {
+                flex: 5.5;
+                display: flex;
+                justify-content: right;
+            }
+        }
+    }
+
+    .pushBox {
+        height: 90rpx;
+        width: 94%;
+        margin-left: 3%;
+        background-color: white;
+        display: flex;
+        margin-top: 20rpx;
+        border-radius: 15rpx;
+        font-size: 30rpx;
+        align-items: center;
+        justify-content: center;
+        .push {
+            flex: 10;
+            padding-left: 15rpx;
+            text-align: left;
+            display: block;
+            background-color: white;
+            font-weight: 400;
+            font-size: 30rpx;
+        }
+        .icon {
+            flex: 1;
+            display: flex;
+            justify-content: right;
+           
+            i {
+                font-size: 30rpx; 
+                margin-left: -8rpx;
+                z-index: 3;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
